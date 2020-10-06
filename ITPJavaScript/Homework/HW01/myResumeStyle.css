@@ -11,23 +11,35 @@ body
     background-color: lavender;
 }
 
-h1, h2, p, li
+h1, h2, p, li, label, input
 {
     font-family: 'Segoe UI', sans-serif;
 }
 
-img
+img 
 {
     margin: 5px;
     margin-top: 5px;
     float: left;
     background-color: palevioletred;
-    padding-bottom: 89%;
+    padding-bottom: 95%;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
     width: 240;
     height: 300;
+}
+
+.icon
+{
+    width: 30;
+    height: 30;
+    padding: 0%;
+    background-color: transparent;
+}
+#sns
+{   
+    padding-bottom: 40px;
 }
 
 #about{background-color: lightsalmon;}
@@ -57,4 +69,25 @@ td, th
 tr:nth-child(even)
 {
     background-color: #dddddd;
+}
+
+form
+{
+    background-color: rgb(230, 170, 230);
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    border: 7pt;
+    border-style: outset;
+    border-color: lightpink;
+    padding-left: 25%;
+    padding-right: 25%
+}
+
+input
+{
+    margin: 2px;
+    border-color: tomato;
+    background-color: peachpuff;
 }
