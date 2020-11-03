@@ -12,13 +12,14 @@ and return first number type value from your function.
 */
 
 var myArray = ['h', true, 12, 'test'];
+console.log("1.  Array input: " + myArray);
 
 //Solution 1
 for (var i=0; i<myArray.length; i++)
 {
     if(typeof(myArray[i]) == 'number')
     {
-        console.log("1. The first number in this array is: "+myArray[i]);
+        console.log("    (Sol#1) The first number in this array is: "+myArray[i]);
         break;
     }
 }
@@ -29,7 +30,7 @@ while(typeof(myArray[index])!='number')
 {
     index++;
 }
-console.log("1. The first number in this array is: "+myArray[index]);
+console.log("    (Sol#2) The first number in this array is: "+myArray[index]);
 
 
 /*
@@ -41,12 +42,25 @@ Note: We can access each value from the array and we can save their count
 in another custom object ? or we can overload array indexes with value? 
 */
 
-var duplicate = [12, 1, 12, 345];
+var array = [12, 1, 12, 345];
+console.log("2.  Array input: " + array);
 
-function findDuplicate(item, index, arr)
+function findDuplicates(arr)
 {
-
+    let duplicates = [];
+    let sorted_array = arr.slice().sort();
+    
+    for(var i = 0; i<(sorted_array.length-1); i++)
+    {
+        if(sorted_array[i+1] == sorted_array[i])
+        {
+            duplicates.push(sorted_array[i]);
+        }
+    }
+    console.log("    Duplicates: " + duplicates);
 }
+
+findDuplicates(array);
 
 /*
 3. Find sum of all integer value from array 
@@ -55,12 +69,14 @@ input : [12,124343,343,34545,4545]
 
 var intSum = [12, 124343, 343, 34545, 4545];
 var sum = 0;
+console.log("3.  Array input: " + intSum);
+
 
 for(var i = 0; i<intSum.length; i++)
 {
     sum+=intSum[i];
 }
-console.log("3. Sum of all integer values is: "+ sum);
+console.log("    Sum of all integer values is: "+ sum);
 
 
 /* 
@@ -68,7 +84,26 @@ console.log("3. Sum of all integer values is: "+ sum);
 */
 
 var sorted = [1, 2, 3, 6, 7, 8, 9, 10];
-var missing = "4. Missing numbers from sorted array: ";
+console.log("4.  Array input: " + sorted);
 
+function missingNo(arr)
+{
+    let first = arr[0];
+    let last = arr[arr.length-1];
+    var missing = [];
+
+    while(first != last)
+    {
+        if(!arr.includes(first, 0))
+        {
+            missing.push(first);
+        }
+        first++;
+    }
+
+    console.log("    Missing numbers from sorted array: " + missing);
+}
+
+missingNo(sorted);
 
 
