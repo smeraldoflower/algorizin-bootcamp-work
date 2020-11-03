@@ -1,5 +1,5 @@
 # algorizin-bootcamp-work
-This repository is a collection of all the assignments I completed during my bootcamp at [Algorizin](https://algorizin.com/).
+This repository is a collection of all the assignments I completed during my technical training at [Algorizin](https://algorizin.com/).
 <br>It currently includes: Java, JavaScript, HTML, CSS 
 
 ## Here is a breakdown of the directories by Language:
