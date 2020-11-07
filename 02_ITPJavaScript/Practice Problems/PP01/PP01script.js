@@ -34,17 +34,17 @@ console.log(num1 + parseInt(num2));
  * HINT: It’s far easier than you think 😉
  */
 
-            // let name = "";
+let name = "";
 
-            // for(let i=0; i<3; i++)
-            // {
-            //     let next = prompt("Enter Name", "nusaiba");
+for(let i=0; i<3; i++)
+{
+    let next = prompt("Enter Name", "nusaiba");
 
-            //     //Ternary operator used
-            //     name = (next > name) ? next : name;
-            // }
+    //Ternary operator used
+    name = (next > name) ? next : name;
+}
 
-            // console.log("Highest in lexicographical order: " + name);
+console.log("Highest in lexicographical order: " + name);
 
 /**
  * 4.
@@ -64,35 +64,35 @@ console.log(num1 + parseInt(num2));
   * F   <= 39   
   */
 
-            // let mark = Math.round(parseFloat(prompt("Enter student's mark", 79.5)));
-            // let grade = "";
+let mark = Math.round(parseFloat(prompt("Enter student's mark", 79.5)));
+let grade = "";
 
-            // if(mark <= 39)
-            // {
-            //     grade = "F";
-            // }
-            // else if(mark <= 49)
-            // {
-            //     grade = "D";
-            // }
-            // else if (mark <= 59)
-            // {
-            //     grade = "C";
-            // }
-            // else if (mark <= 69)
-            // {
-            //     grade = "B";
-            // }
-            // else if (mark <= 79)
-            // {
-            //     grade = "A";
-            // }
-            // else
-            // {
-            //     grade = "A+";
-            // }
+if(mark <= 39)
+{
+    grade = "F";
+}
+else if(mark <= 49)
+{
+    grade = "D";
+}
+else if (mark <= 59)
+{
+    grade = "C";
+}
+else if (mark <= 69)
+{
+    grade = "B";
+}
+else if (mark <= 79)
+{
+    grade = "A";
+}
+else
+{
+    grade = "A+";
+}
 
-            // console.log("Grade: " + grade);
+console.log("Grade: " + grade);
 
 /**
  * 5.
