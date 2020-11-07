@@ -34,9 +34,116 @@ console.log(num1 + parseInt(num2));
  * HINT: It’s far easier than you think 😉
  */
 
-var name1 = prompt("Enter Name", iffat);
-var name2 = prompt("Enter Name", nusaiba);
-var name3 = prompt("Enter Name", mahmood);
+            // let name = "";
 
-//console.log((name1>name2 ? : (name1>name3) : name2>name3 ));
+            // for(let i=0; i<3; i++)
+            // {
+            //     let next = prompt("Enter Name", "nusaiba");
 
+            //     //Ternary operator used
+            //     name = (next > name) ? next : name;
+            // }
+
+            // console.log("Highest in lexicographical order: " + name);
+
+/**
+ * 4.
+ * Write a program that takes a student’s obtained mark in a particular subject
+ * and outputs the grade corresponding to the mark.
+ * If the student gets 79.5, it should be rounded to 80 and shown as A+ 
+ * (considering >=80 corresponds to A+)
+ * Hint: Look for how a number can be rounded in JavaScript
+ */
+
+ /**
+  * A+  >= 80
+  * A   79-70
+  * B   69-60
+  * C   59-50
+  * D   49-40
+  * F   <= 39   
+  */
+
+            // let mark = Math.round(parseFloat(prompt("Enter student's mark", 79.5)));
+            // let grade = "";
+
+            // if(mark <= 39)
+            // {
+            //     grade = "F";
+            // }
+            // else if(mark <= 49)
+            // {
+            //     grade = "D";
+            // }
+            // else if (mark <= 59)
+            // {
+            //     grade = "C";
+            // }
+            // else if (mark <= 69)
+            // {
+            //     grade = "B";
+            // }
+            // else if (mark <= 79)
+            // {
+            //     grade = "A";
+            // }
+            // else
+            // {
+            //     grade = "A+";
+            // }
+
+            // console.log("Grade: " + grade);
+
+/**
+ * 5.
+ * Design an employee qualification system.
+ * The job of the system is to first take the employee’s personal information, these are
+ * 
+ * a.Name
+ * b.Age
+ * c.Skills:
+ *      i.Soft Skills (array)
+ *      ii.Technical Skills (array)
+ * d.Location
+ * 
+ * For an employee to qualify for the job, he needs to meet all the requirements mentioned below:
+ * 
+ * - Age must be greater than or equal to 30
+ * - Number of technical skills should be greater than soft skills
+ * - The person must be living in either Texas or Florida
+ * 
+ * If the person qualifies, your program should output “(name) is qualified for the job"
+ * 
+ * Demonstration of Object is a must here, avoid using variables unless absolutely required.
+ */
+
+ let employee =
+ {
+     name: prompt("Enter name", "Nusaiba"),
+     age: parseInt(prompt("Enter age", 30)),
+     location: (prompt("Enter location", "TEXAS")).toUpperCase(),
+
+     // TO DO: Take user input for array of skills:
+     skills:
+     {
+         soft:["leadership", "communication"],
+         technical:["JavaScript", "Java", "C++"],
+     }
+ }
+
+if
+(
+    (
+        ( (employee.age >= 30) ? true : false ) &&
+        ( (employee.location == "FLORIDA" || employee.location == "FL" || 
+            employee.location == "TEXAS"|| employee.location == "TX") ? true : false ) &&
+        ( (employee.skills.technical.length > employee.skills.soft.length) ? true : false )
+    )
+)
+{
+    console.log(employee.name + " is qualified for the job.");
+}
+else
+{
+    console.log(employee.name + " is NOT qualified for the job.");
+}
