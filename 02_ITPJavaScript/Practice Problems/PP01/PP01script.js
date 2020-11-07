@@ -117,20 +117,39 @@ console.log(num1 + parseInt(num2));
  * Demonstration of Object is a must here, avoid using variables unless absolutely required.
  */
 
- let employee =
- {
-     name: prompt("Enter name", "Nusaiba"),
-     age: parseInt(prompt("Enter age", 30)),
-     location: (prompt("Enter location", "TEXAS")).toUpperCase(),
+// Employee Qualification System
 
-     // TO DO: Take user input for array of skills:
-     skills:
-     {
-         soft:["leadership", "communication"],
-         technical:["JavaScript", "Java", "C++"],
-     }
- }
+// Employee Object
+let employee =
+{
+    name: prompt("Enter name", "Nusaiba"),
+    age: parseInt(prompt("Enter age", 30)),
+    location: (prompt("Enter location", "TEXAS")).toUpperCase(),
+    skills:
+    {
+        soft:[],
+        technical:[],
+    }
+}
 
+// Prompting input for skills arrays
+{
+    let softie = prompt("Enter soft skills. Leave blank to stop entering.", "leadership");
+    while(softie!= "")
+    {
+        softie = prompt("Enter soft skills. Leave blank to stop entering.", "leadership");
+        employee.skills.soft.push(softie);
+    }
+
+    let techie = prompt("Enter technical skills. Leave blank to stop entering.", "Javascript");
+    while(techie!= "")
+    {
+        techie = prompt("Enter technical skills. Leave blank to stop entering.", "Javascript");
+        employee.skills.technical.push(techie);
+    }
+}
+
+// Checking qualifications
 if
 (
     (
