@@ -30,6 +30,7 @@
     }
 }
 
+
 /**
  * 2. Write a function to implement Binary Search in JavaScript.
  * It would take two arguments array​ and ​element​,
@@ -37,6 +38,36 @@
  * it would return the index 
  * otherwise -1
  */
+
+{
+    function binarySearch(array, element)
+    {
+        let sorted_array = array.sort(); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let min_index = 0;
+        let max_index = sorted_array.length - 1;
+        let mid_index;
+
+        while(max_index >= min_index)
+        {
+            mid_index = Math.floor((min_index + max_index) * 0.5);
+
+            if (sorted_array[mid_index] === element) { return mid_index; }
+            else if (sorted_array[mid_index] < element) { min_index = mid_index +1; }
+            else { max_index = mid_index -1; }
+        }
+        return -1;
+    }
+
+    let arr = [2, 8, 4, 9, 5, 7, 1, 3, 6];
+    let ele = 7;
+
+    console.log(binarySearch(arr, 3))
+    console.log(binarySearch(arr, 7));
+    console.log(binarySearch(arr, 5));
+    console.log(binarySearch(arr, 10));
+    console.log(binarySearch(arr, 0));
+}
+
 
 /**
  * 3. Write a function to find out student’s obtained grades based on marks.
