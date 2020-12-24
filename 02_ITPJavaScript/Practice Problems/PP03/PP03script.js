@@ -2,12 +2,14 @@
 // ITP JS HW 3
 // HW03script.js
 
-function getFormInput()
+function getFormInput(event)
 {
-    let name = document.getElementById("student_form").elements.namedItem("student_name").value;
-    let age = document.getElementById("student_form").elements.namedItem("age").value;
-    let phone = document.getElementById("student_form").elements.namedItem("phone").value;
-    let address = document.getElementById("student_form").elements.namedItem("address").value;
+    event.preventDefault();
+
+    let name = document.querySelector("#student_name").value;
+    let age = document.querySelector("#age").value;
+    let phone = document.querySelector("#phone").value;
+    let address = document.querySelector("#address").value;
 
     console.log(name);
     console.log(age);
@@ -31,7 +33,18 @@ function getFormInput()
     //document.getElementById("deleteButton").addEventListener("click",)
 };
 
-document
-    //.getElementById("student_form").elements.namedItem("addButton")
-    .getElementById("addButton")
-    .addEventListener("click", getFormInput);
+function deleteStudent(event)
+{
+    let element = event.target
+    if(element.id === 'deleteButton')
+    {
+        element.parentNode.parentNode.remove();
+        //event.target.parentNode.parentNode.remove();
+    }
+    // document.querySelectorAll("button[id = 'deleteButton']")[0].parentNode.parentNode.remove();
+}
+
+document.getElementById("student_form").addEventListener('submit', getFormInput);
+document.querySelector("#table").addEventListener('click', deleteStudent);
+//document.querySelectorAll("#table button[id = 'deleteButton']").addEventListener('click', deleteStudent);
+//document.getElementById("table").addEventListener()
