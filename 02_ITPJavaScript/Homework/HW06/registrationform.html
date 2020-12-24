@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <h2>Registration Form</h2>
+
+    <div id='Form'>
+        <p>Fields marked with <b style="color:Tomato;">*</b> are required.</p>
+        <form id='RegForm' action="">
+            <label for="fname">First Name<b style="color:Tomato;">*</b> </label>
+            <input type="text" name="fname" id="fname" placeholder="Enter First Name" required>
+
+            <label for="lname">Last Name<b style="color:Tomato;">*</b> </label>
+            <input type="text" name="fname" id="lname" placeholder="Enter Last Name" required><br><br>
+
+            <label for="age">Age<b style="color:Tomato;">*</b> </label>
+            <input type="number" name="age" id="age" placeholder="Enter Age" min=1 max=100 size=10 required>
+
+            <label for="gender">Gender<b style="color:Tomato;">*</b> </label>
+            <select name="gender" id="gender" required>
+                <option value="select" selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="phone">Phone Number </label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{5}-[0-9]{6}" placeholder="01234-567890"><br><br>
+
+            <label for="currentAddress">Current Address<b style="color:Tomato;">*</b> </label><br>
+            <div id=currentAddress>
+                <input type="text" name="currentAddress_l1" id="currentAddress_l1" placeholder="Address Line 1" size=45
+                    required><br>
+                <input type="text" name="currentAddress_l2" id="currentAddress_l2"
+                    placeholder="Address Line 2 [optional]" size=45><br>
+                <input type="text" name="currentAddress_city" id="currentAddress_city" placeholder="City" size=15
+                    required>
+                <input type="text" name="currentAddress_state" id="currentAddress_state" placeholder="State" size=4
+                    required>
+                <input type="tel" name="currentAddress_zipcode" id="currentAddress_zipcode" placeholder="Zip Code 12345"
+                    pattern="[0-9]{5}" size=15 required><br>
+                <input type="text" name="currentAddress_country" id="currentAddress_country" placeholder="Country"
+                    size=45 required><br>
+            </div>
+            <br>
+
+            <label for="permanentAddress"> Permanent Address<b style="color:Tomato;">*</b> </label><br>
+            <div id=permanentAddress>
+                <input type="text" name="permanentAddress_l1" id="permanentAddress_l1" placeholder="Address Line 1"
+                    size=45 required><br>
+                <input type="text" name="permanentAddress_l2" id="permanentAddress_l2" placeholder="Address Line 2"
+                    size=45><br>
+                <input type="text" name="permanentAddress_city" id="permanentAddress_city" placeholder="City" size=15
+                    required>
+                <input type="text" name="permanentAddress_state" id="permanentAddress_state" placeholder="State" size=4
+                    required>
+                <input type="tel" name="permanentAddress_zipcode" id="permanentAddress_zipcode"
+                    placeholder="Zip Code 12345" pattern="[0-9]{5}" size=15 required><br>
+                <input type="text" name="permanentAddress_country" id="permanentAddress_country" placeholder="Country"
+                    size=45 required><br>
+
+                <input type="checkbox" name="permaAdd_sameAsCurrent" id="permaAdd_sameAsCurrent">
+                <label for="permaAdd_sameAsCurrent">Same as Current Address.</label><br>
+            </div>
+            <br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <script src="registrationscript.js" async defer></script>
+</body>
+
+</html>
